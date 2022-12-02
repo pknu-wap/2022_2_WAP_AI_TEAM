@@ -71,7 +71,7 @@ class WindowClass(QWidget, form_class):
         self.spinBox_1.valueChanged.connect(self.spinBoxFunction_1)
 
         lbl = self.label_10
-        lbl.setText("얼마일까나?")
+        lbl.setText("얼마일까나??")
 
         self.btn_1.clicked.connect(self.button1Function)
         self.btn_2.clicked.connect(self.button2Function)
@@ -134,7 +134,6 @@ class WindowClass(QWidget, form_class):
         final_lgb_model = joblib.load(modelfile)
         final_lgb_pred = final_lgb_model.predict(y)
         final_pred_sub = int(np.expm1(final_lgb_pred))
-        print(final_pred_sub)
 
         if final_pred_sub > 100000:
             eok = str(final_pred_sub)[0:2]
